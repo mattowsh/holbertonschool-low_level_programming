@@ -1,14 +1,16 @@
-#include <unistd.h>
+#include <unistd.h> /* linked to a specific library */
 
 /**
- * main - iiiiiiiiiiiiiii
+ * main - displays the string to the standard error
  * Return: Always 1 (Success)
  */
 
 int main(void)
 {
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19"; 59); 
-	/* 2: for stderr*; 59: for the number of characters(bytes) in the sentences */
+	char ST[59] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, ST, 59);
+	/* 1st: for stderr; 2nd: string; 3rd: number of chars(bytes) in the string */
 
 	return (1);
 }
