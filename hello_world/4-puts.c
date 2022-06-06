@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main: prints Programming is like building a multilingual puzzle and return PID = errors quantity
+ * main: prints the sentence and return PID = errors quantity
  */
 
 int main(void)
