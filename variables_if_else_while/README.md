@@ -1,1 +1,1 @@
-In this repository you can find variables, if, else, while
+In this repository you can find info about variables, if, else, while
