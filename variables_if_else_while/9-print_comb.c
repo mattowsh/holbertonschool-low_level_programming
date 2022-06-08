@@ -6,22 +6,23 @@
 
 int main(void)
 {
-	char n;
+/* Putchar prints a character by ASCII code if you don't put numbers in simple-quotes */
+	int n = '0';
 
-	for (n = '0'; n <= '9'; n++)
+	while (n <= '9')
 	{
-		if (n == '9')
-		{
-			putchar(n);
-		}
-		else
-		{
 		putchar(n);
-		putchar(',');
-		putchar(' ');
+
+		if (n != '9')
+		{
+			putchar(',');
+			putchar(' ');
 		}
+
+		n++;
 	}
 
 	putchar('\n');
 	return (0);
 }
+
