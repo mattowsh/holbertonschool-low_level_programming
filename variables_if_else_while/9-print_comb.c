@@ -6,7 +6,7 @@
 
 int main(void)
 {
-/* Putchar prints a character by ASCII code if you don't put numbers in simple-quotes */
+/* Putchar prints a char by ASCII code if you don't put numbers in quotes */
 	int n = '0';
 
 	while (n <= '9')
