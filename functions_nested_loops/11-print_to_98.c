@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * add - Adds two integers and returns the result
- * Return: a + b
+ * add - Prints all natural numbers from n to 98
+ * @n : integer
  */
 
 void print_to_98(int n)
