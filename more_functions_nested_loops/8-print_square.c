@@ -2,7 +2,6 @@
 
 /**
  * print_size - Prints a line of # on the terminal
- * print_square - Prints n times the line of #
  * @size : integer, size of square
  */
 
@@ -26,12 +25,24 @@ void print_size(int size)
 }
 
 
+/**
+ * print_square - Prints n times the line of #
+ *
+ */
+
 void print_square(int size)
 {
 	int row; /* quantity of rows to be print */
 
-	for (row = 0; row < size; row++)
+	if (size > 0)
 	{
-		print_size(size);
+		for (row = 0; row < size; row++)
+		{
+			print_size(size);
+		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
