@@ -5,21 +5,24 @@
  * @n : integer
  */
 
+
 void print_diagonal(int n)
 {
-	int counter; /* quantity of _ to print */
+	int row; /* quantity of rows to be print */
+	int space; /* quantity of spaces to be print */
 
-	if (n > 0)
+	if (n <= 0)
 	{
-		for (counter = 1; counter < n; counter++)
+		_putchar('\n');
+	}
+
+	for (row = 0; row < n; row++)
+	{
+		for (space = 0; space < row; space++)
 		{
 			_putchar(32); /* ASCII code: space */
 		}
 		_putchar(92); /* ASCII code: \ */
-		_putchar('\n');
-	}
-	else
-	{
 		_putchar('\n');
 	}
 }
