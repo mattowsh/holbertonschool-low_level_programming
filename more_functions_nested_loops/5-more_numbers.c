@@ -6,25 +6,19 @@
 
 void more_numbers(void)
 {
-	int counter, n, lastDigit;
+	int counter, n;
 
-	/* to print 10 times the sequencie */
-	for (counter = 48; counter <= 57; counter++)
+	for (counter = 0; counter <= 10; counter++)
 	{
-		/* numbers from 0 to 9: only lastDigit */
-		for (n = 48; n <= 57; n++)
+		for (n = 0; n <= 14; n++)
 		{
-			_putchar(n);
-		}
+			if (n > 9)
+			{
+				_putchar(n / 10 + '0'); /* to obtain the first digit */
+			}
+			_putchar(n % 10 + '0'); /* to obtain the last digit */
 
-		/* numbers from 10 to 14: firstDigit + lastDigit */
-		for (lastDigit = 48; lastDigit <= 52; lastDigit++)
-		{
-			_putchar(49); /* correspond to firstDigit = 1 */
-			_putchar(lastDigit);
 		}
-
-		/* final new line */
 		_putchar('\n');
 	}
 }
