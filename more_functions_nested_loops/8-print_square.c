@@ -27,7 +27,7 @@ void print_size(int size)
 
 /**
  * print_square - Prints n times the line of #
- *
+ * @size : integer, size of square
  */
 
 void print_square(int size)
