@@ -16,7 +16,7 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		/* numbers to be print */
-		if((i % 3 == 0) && (i % 5 == 0))
+		if ((i % 3 == 0) && (i % 5 == 0))
 		{
 			printf("FizzBuzz");
 		}
@@ -30,13 +30,13 @@ int main(void)
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", i);
 		}
 
 		/* space between numbers */
 		if (i != 100)
 		{
-			printf(" ");
+			putchar(32); /* ASCII code: space */
 		}
 	}
 	printf("\n");
