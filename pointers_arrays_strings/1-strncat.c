@@ -2,8 +2,8 @@
 
 /**
  * _strncat - Concatenates two strings
- *
- *
+ * @src : source of my data
+ * @dest : final destiny where I will print my data
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -18,16 +18,16 @@ char *_strncat(char *dest, char *src, int n)
 	if (!src)
 		return (0);
 
-	
+
 	if (dest[i] == '\0' || src[j] == '\0')
 		return (dest);
 	else if (n > 0)
 	{
 		while (dest[i]) /* calculates the length of the dest */
-			i++;		
+			i++;
 		for (; j < n; j++, i++)
 			dest[i] = src[j];
-		
+
 		dest[i] = '\0';
 	}
 
