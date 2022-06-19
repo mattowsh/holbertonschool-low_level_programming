@@ -12,6 +12,10 @@
 
 char *_strchr(char *s, char c)
 {
+	/* case: char to locate: void */
+	if (!s[0])
+		return (s);
+
 
 	for (; s[0]; s++) /* s++: move the pointer */
 	{
