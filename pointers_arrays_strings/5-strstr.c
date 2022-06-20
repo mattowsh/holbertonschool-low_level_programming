@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * _strstr - Finds the first occurrence of the substring needle in the 
+ * _strstr - Finds the first occurrence of the substring needle in the
  * string haystack
  * @haystack : principal string
  * @needle : substring to locate
