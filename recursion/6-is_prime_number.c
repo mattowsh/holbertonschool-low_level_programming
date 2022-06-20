@@ -11,7 +11,8 @@ int is_prime_number(int n)
 {
 	if (n == 1 || n < 0)
 		return (0);
-	return (searchP(n, P - 1));
+	
+	return (searchP(n, n - 1));
 }
 
 /**
