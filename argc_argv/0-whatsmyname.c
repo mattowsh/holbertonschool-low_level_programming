@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/**
- * mynameis - Prints its name, followed by a new line
+/*
+ * main - Prints its name, followed by a new line
  * @argc : argument count
  * @argv : argument variable
  *
