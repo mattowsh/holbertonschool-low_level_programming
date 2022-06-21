@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 # Transform .c extension for .o 
 gcc -c *.c
