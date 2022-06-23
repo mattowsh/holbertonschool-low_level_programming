@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - Concatenates two strings
+ * str_concat - Concatenates two strings
  * @s1 : string destination
  * @s2 : string to move
  *
@@ -37,8 +37,6 @@ char *str_concat(char *s1, char *s2)
 
 	for (j = 0; s2[j]; j++, i++)
 		ar[i] = s2[j];
-
-	ar[i] = '\0';
 
 	return (ar);
 }
