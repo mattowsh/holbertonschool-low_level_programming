@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	for (i = 0; str[i]; i++) /* calculates the length of the string */
 		;
 
-	ar = malloc(i * sizeof(char));
+	ar = malloc(i + 1 * sizeof(char)); /* i +1 bc we considered the final '\0' */
 
 	if (ar == NULL)
 		return (NULL);
