@@ -1,17 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * str_concat - Concatenates two strings
  * @s1 : string destination
  * @s2 : string to move
  *
- * Return : NULL if size = 0, ar otherwise
+ * Return: NULL if size = 0, ar otherwise
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	int length, i, j;
+	int i, j;
 	char *ar;
 
 	/* exepciones */
@@ -21,13 +22,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	/*calculate length of s1 + s2*/
-	for (length = 0; s1[length]; length++)
-		;
-	for (; s2[length]; length++)
-		;
-
-	ar = malloc(length + 1 * sizeof(char));
+	ar = malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
 
 	if (ar == NULL)
 		return (NULL);
