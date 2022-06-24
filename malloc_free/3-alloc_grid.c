@@ -18,14 +18,14 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	ar = malloc(width * sizeof(int));
-
+	ar = malloc(height * sizeof(int *)); 
+	/* bc ar is a pointer of pointers */
 	if (ar == NULL)
 		return (NULL);
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		ar[i] = malloc(height * sizeof(int));
+		ar[i] = malloc(width * sizeof(int));
 		if (ar[i] == NULL)
 		{
 			for (j = i - 1; j >= 0; j--)
