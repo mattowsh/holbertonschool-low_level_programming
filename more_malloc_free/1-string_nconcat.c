@@ -6,7 +6,7 @@
  * string_nconcat - Concatenates two strings
  * @s1 : string 1
  * @s2 : string 2
- * n : number of chars of s2 to concatenate with s1
+ * @n : number of chars of s2 to concatenate with s1
  *
  * Return: strings concatenated
  */
@@ -24,10 +24,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > strlen(s2))
 		n = strlen(s2); /*we considered the final \0 in ar*/
 
-	
+
 	ar = malloc((strlen(s1) + n + 1) * sizeof(char));
 	if (ar == NULL)
+	{
+		free(ar);
 		return (NULL);
+	}
 
 	for (i = 0; s1[i]; i++)
 		ar[i] = s1[i];
