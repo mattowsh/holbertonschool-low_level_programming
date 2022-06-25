@@ -22,15 +22,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	if (n > strlen(s2))
-		n = strlen(s2); /*we considered the final \0 in ar*/
+		n = strlen(s2) + 1; /*considered the final \0*/
 
 
 	ar = malloc((strlen(s1) + n + 1) * sizeof(char));
 	if (ar == NULL)
-	{
-		free(ar);
 		return (NULL);
-	}
 
 	for (i = 0; s1[i]; i++)
 		ar[i] = s1[i];
