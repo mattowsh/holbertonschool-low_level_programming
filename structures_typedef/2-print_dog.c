@@ -15,17 +15,15 @@ void print_dog(struct dog *d)
 	if (d->name)
 		printf("Name: %s\n", d->name);
 	else
-		printf("%p\n", d->name); /*bc name is a pointer*/
+		printf("Name: %p\n", d->name); /*bc name is a pointer*/
 
 	if (d->age)
 		printf("Age: %f\n", d->age);
-	else if (d->age == 0)
-		printf("%f\n");
 	else
-		printf("(neil)\n");
+		printf("Age: (nil)\n");
 
 	if (d->owner)
 		printf("Owner: %s\n", d->owner);
 	else
-		printf("%p\n", d->owner); /*bc owner is a pointer*/
+		printf("Owner: %p\n", d->owner); /*bc owner is a pointer*/
 }
