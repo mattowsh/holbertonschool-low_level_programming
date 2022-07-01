@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int a = atoi(argv[1]);
-	int operator = atoi(argv[2]);
+	int operator = argv[2][0];
 	int b = atoi(argv[3]);
 	int result = 0;
 	int (*f)(int, int);
