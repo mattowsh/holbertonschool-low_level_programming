@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int a = atoi(argv[1]);
-	/* int operator = argv[2][0]; */
+	int operator = argv[2][0];
 	int b = atoi(argv[3]);
 	int result = 0;
 	int (*f)(int, int);
@@ -30,8 +30,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	/* if ((operator == '%' || operator == '/') && (b == 0)) */
-	if (f == NULL)
+	if ((operator == '%' || operator == '/') && (b == 0))
 	{
 		printf("Error\n");
 		exit(100);
