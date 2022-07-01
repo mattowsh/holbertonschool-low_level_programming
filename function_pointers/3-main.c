@@ -1,7 +1,11 @@
 #include "3-calc.h"
 
 /**
- * main - 
+ * main - Calculator
+ * @argc : arguments count
+ * @argv : arguments variable
+ *
+ * Return: result of the operation
  */
 
 int main(int argc, char *argv[])
@@ -31,7 +35,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	
+
 	result = f(a, b);
 	printf("%d\n", result);
 	return (0);
