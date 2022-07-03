@@ -16,14 +16,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 
-	typedef struct _print
-	{
-		char *letter;
-		void (*f)(va_list args, char *separator);
-	} _print_t;
-
-	_print_t data[] = 
-	{
+	_print_t data[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
@@ -60,29 +53,51 @@ void print_all(const char * const format, ...)
  * @args : list of arguments
  * @separator : separator between arguments
  */
+
 void print_c(va_list args, char *separator)
 {
 	char c = va_arg(args, int); /* porque le pinta al va_arg */
+
 	printf("%s%c", separator, c);
 }
+
+/*
+ * print_s - Prints string
+ * @args : list of arguments
+ * @separator : separator between arguments
+ */
 
 void print_s(va_list args, char *separator)
 {
 	char *str = va_arg(args, char *);
+
 	if (!str)
 		str = "(nil)";
 	printf("%s%s", separator, str);
 }
 
+/*
+ * print_i - Prints integer
+ * @args : list of arguments
+ * @separator : separator between arguments
+ */
+
 void print_i(va_list args, char *separator)
 {
 	int i = va_arg(args, int);
+
 	printf("%s%d", separator, i);
 }
+
+/*
+ * print_f - Prints float
+ * @args : list of arguments
+ * @separator : separator between arguments
+ */
 
 void print_f(va_list args, char *separator)
 {
 	float f = va_arg(args, double); /* tambien porque le pinta hmm */
+
 	printf("%s%f", separator, f);
 }
-
