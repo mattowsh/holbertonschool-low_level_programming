@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
 		while (data[j].letter)
@@ -48,12 +48,11 @@ void print_all(const char * const format, ...)
 }
 
 /* mini functions */
-/*
+/**
  * print_c - Prints char
  * @args : list of arguments
  * @separator : separator between arguments
  */
-
 void print_c(va_list args, char *separator)
 {
 	char c = va_arg(args, int); /* porque le pinta al va_arg */
@@ -61,12 +60,11 @@ void print_c(va_list args, char *separator)
 	printf("%s%c", separator, c);
 }
 
-/*
+/**
  * print_s - Prints string
  * @args : list of arguments
  * @separator : separator between arguments
  */
-
 void print_s(va_list args, char *separator)
 {
 	char *str = va_arg(args, char *);
@@ -76,12 +74,11 @@ void print_s(va_list args, char *separator)
 	printf("%s%s", separator, str);
 }
 
-/*
+/**
  * print_i - Prints integer
  * @args : list of arguments
  * @separator : separator between arguments
  */
-
 void print_i(va_list args, char *separator)
 {
 	int i = va_arg(args, int);
@@ -89,12 +86,11 @@ void print_i(va_list args, char *separator)
 	printf("%s%d", separator, i);
 }
 
-/*
+/**
  * print_f - Prints float
  * @args : list of arguments
  * @separator : separator between arguments
  */
-
 void print_f(va_list args, char *separator)
 {
 	float f = va_arg(args, double); /* tambien porque le pinta hmm */
