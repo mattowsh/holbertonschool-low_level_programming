@@ -6,9 +6,7 @@ OBJ = (SRC:.c=.o)
 NAME = school
 
 # Compiler rules
-all: ppal
-
-ppal: $(OBJ)
+all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 # PHONY: to remove .o files post-compiler
