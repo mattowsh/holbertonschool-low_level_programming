@@ -1,0 +1,16 @@
+# Compiler gcc flags
+CFLAGS = -Wall -pedantic -Werror -Wextra -std=gnu89
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+
+# Compiler rules
+all: school
+
+school: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+# PHONY: to remove .o files post-compiler
+clean:
+	rm -f school *.o
