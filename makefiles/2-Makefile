@@ -2,17 +2,14 @@
 CFLAGS = -Wall -pedantic -Werror -Wextra -std=gnu89
 CC = gcc
 SRC = main.c school.c
-OBJ = main.o school.o
+OBJ = (SRC:.c=.o)
 NAME = school
 
 # Compiler rules
 all: school
 
-school: $(NAME)
-	$(CC) $(CFLAGS) objects -o $(NAME)
-
-objects: $(SRC) m.h
-	$(CC) $(CFLAGS) -c $(SRC)
+school: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 # PHONY: to remove .o files post-compiler
 clean:
