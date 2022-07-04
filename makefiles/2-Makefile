@@ -8,8 +8,11 @@ NAME = school
 # Compiler rules
 all: school
 
-school: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+school: $(NAME)
+	$(CC) $(CFLAGS) objects -o $(NAME)
+
+objects: $(SRC) m.h
+	$(CC) $(CFLAGS) -c $(SRC)
 
 # PHONY: to remove .o files post-compiler
 clean:
