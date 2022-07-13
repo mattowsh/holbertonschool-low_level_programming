@@ -20,7 +20,15 @@ size_t print_list(const list_t *h)
 		else
 			printf("[0] (nil)\n");
 		i++; /* to calculate the number of nodes */
+		h = h->next;
 	}
+
+	/* at this point h = the last node, so, print it */
+	if (h->str != NULL)
+		printf("[%u] %s\n", h->len, h->str);
+	else
+		printf("[0] (nil)\n");
+
 
 	return (i + 1); /* to contemplate the last node */
 }
