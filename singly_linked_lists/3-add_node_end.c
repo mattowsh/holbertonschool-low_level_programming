@@ -11,7 +11,7 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0;
 	char *duplicated = strdup(str);
 
 	list_t *newnode = NULL;
