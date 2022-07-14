@@ -10,8 +10,6 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	int i = 0;
-
 	listint_t *newnode;
 	listint_t *aux;
 
