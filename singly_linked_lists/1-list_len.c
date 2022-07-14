@@ -17,5 +17,5 @@ size_t list_len(const list_t *h)
 		h = h->next;
 	}
 
-	return (i + 1) /* to contemplate the last node */
+	return (i + 1); /* to contemplate the last node */
 }
