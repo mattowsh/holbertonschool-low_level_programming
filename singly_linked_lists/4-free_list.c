@@ -8,16 +8,22 @@
 void free_list(list_t *head)
 {
 	list_t *aux;
+	aux = head;
 
-	if (head != NULL)
+	if (head == NULL)
 	{
-		aux = *head;
+		free(head);
+		return;
+	}
+	else
+	{
 		while (aux->next != NULL)
 		{
-			free(head);
-			head = head->next;
+			free(aux->str);
+			free(aux);
+			aux = aux->next;
 		}
-	/* to free the last node */
-		free(head);
+		free(aux->str);
+		free(aux);
 	}
 }
