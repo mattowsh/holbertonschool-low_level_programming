@@ -8,5 +8,13 @@
 void free_list(list_t *head)
 {
 	if (head != NULL)
+	{
+		while (head->next != NULL)
+		{
+			free(head);
+			head = head->next;
+		}
+	/* to free the last node */
 		free(head);
+	}
 }
