@@ -9,18 +9,18 @@
 
 int pop_listint(listint_t **head)
 {
+	int i; /* to save head->n */
+	listint_i *aux;
+
 	/* if the linked list is empty */
 	if (head == NULL)
 		return (0);
 
-	listint_t *aux; /* to save head->n */
-	listint_t *newHead;
+	aux = *head;
+	i = head->n;
 
-	aux->n = head->n;
-	newHead = *head;
+	*head = (aux)->next;
+	free(aux);
 
-	free(newHead);
-	*head = (newHead)->next;
-
-	return (aux->n);
+	return (i);
 }
