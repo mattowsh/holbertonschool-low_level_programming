@@ -1,6 +1,4 @@
 #include "lists.h"
-listint_t *add_nodeint(listint_t **head, const int n);
-listint_t *add_nodeint_end(listint_t **head, const int n);
 
 /**
  * insert_nodeint_at_index - Inserts a new node at a given position
