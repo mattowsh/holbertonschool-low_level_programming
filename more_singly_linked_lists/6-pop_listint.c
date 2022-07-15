@@ -10,14 +10,14 @@
 int pop_listint(listint_t **head)
 {
 	int i; /* to save head->n */
-	listint_i *aux;
+	listint_t *aux;
 
 	/* if the linked list is empty */
 	if (head == NULL)
 		return (0);
 
 	aux = *head;
-	i = head->n;
+	i = (*head)->n; /* data saved in this direction */
 
 	*head = (aux)->next;
 	free(aux);
