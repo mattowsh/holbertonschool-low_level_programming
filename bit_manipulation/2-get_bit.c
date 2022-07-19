@@ -17,6 +17,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		if (binary_value == 0 || binary_value == 1)
 			return (binary_value);
 	}
-	
+
 	return (-1);
 }
