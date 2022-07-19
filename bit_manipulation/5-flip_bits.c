@@ -11,10 +11,10 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int count = 0, i; /* i to iterate ULONG_MAX value = 64 */
-	unsigned int aux;
+	int count = 0, i; /* i to iterate ULONG_MAX value = 64 */
+	int aux;
 
-	for (i = 0, aux = n ^ m; i <= 64; i++, aux = aux >> 1)
+	for (i = 0, aux = n ^ m; i < 64; i++, aux = aux >> 1)
 		count += aux & 1;
 
 	return (count);
