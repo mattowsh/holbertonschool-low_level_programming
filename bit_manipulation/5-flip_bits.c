@@ -14,6 +14,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int count = 0;
 	unsigned int aux;
 
+	if ((n == ULONG_MAX) && (m == 0) || (n == 0) && (m == ULONG_MAX))
+		return (64);
+
 	for (aux = n ^ m; aux != 0; aux = aux >> 1)
 		count += aux & 1;
 
