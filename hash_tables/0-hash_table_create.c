@@ -9,7 +9,7 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	int counter = 0;
+	unsigned long int counter = 0;
 	hash_table_t *newtable;
 
 	/* border case */
@@ -30,7 +30,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	for (; counter < size; counter++)
-		newtable[counter] = NULL;
+		newtable->array[counter] = NULL;
 
 	return (newtable);
 }
