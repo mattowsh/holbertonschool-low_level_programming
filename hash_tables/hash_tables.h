@@ -1,8 +1,9 @@
-#ifndef HASHTABLES_H
-#define HASHTABLES_H
+#ifndef HASH_TABLES_H
+#define HASH_TABLES_H
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.>
 
 /**
  * struct hash_node_s - Node of a hash table
