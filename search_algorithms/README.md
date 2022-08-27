@@ -6,9 +6,4 @@
 - What is a binary search
 - What is the best search algorithm to use depending on your needs
 
-## Author
-[Belén Matto](https://www.linkedin.com/in/mattobelen/)
-
-Holberton School, 2022
-
-Montevideo, Uruguay
+Holberton School, UY 2022
