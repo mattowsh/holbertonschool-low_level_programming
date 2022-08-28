@@ -6,4 +6,6 @@
 - What is a binary search
 - What is the best search algorithm to use depending on your needs
 
-Holberton School, UY 2022
+<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=25% heigth=25% ></img></a>
+
+Montevideo, Uruguay 2022
