@@ -60,7 +60,7 @@ int rec_binary(int *array, size_t low, size_t high, int value)
 	{
 		mid = (low + high) / 2;
 		if (value == array[mid])
-			return (mid);
+			return (array[mid]);
 		else if (value > array[mid])
 		{
 			print_array(array, mid + 1, high);
@@ -72,6 +72,9 @@ int rec_binary(int *array, size_t low, size_t high, int value)
 			return (rec_binary(array, low, mid - 1, value));
 		}
 	}
+
+	if (value == array[low])
+		return (array[low]);
 
 	return (-1);
 }
