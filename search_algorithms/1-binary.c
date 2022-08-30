@@ -55,6 +55,11 @@ int binary_search(int *array, size_t size, int value)
 int rec_binary(int *array, size_t low, size_t high, int value)
 {
 	size_t mid = 0;
+	
+	if (value == array[low])
+		return (array[low]);
+	if (value == array[high])
+		return (array[high]);
 
 	if (low < high)
 	{
@@ -72,9 +77,6 @@ int rec_binary(int *array, size_t low, size_t high, int value)
 			return (rec_binary(array, low, mid - 1, value));
 		}
 	}
-
-	if (value == array[low])
-		return (array[low]);
 
 	return (-1);
 }
